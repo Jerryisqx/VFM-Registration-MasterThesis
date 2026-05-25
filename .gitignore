@@ -1,0 +1,75 @@
+# ============================================================
+#  .gitignore — VFM-Registration-MasterThesis (PUBLIC repo)
+#  Default-deny for anything that could carry patient imagery,
+#  model weights, or bulky third-party clones.
+# ============================================================
+
+# ---- Patient medical data — NEVER commit (public repo) ----
+data/
+code/gui/02_view_results/
+code/gui/04_samples/
+code/registration/000010_femur.png
+# any stray clinical raster anywhere
+*.tif
+*.tiff
+*.dcm
+*.dicom
+
+# ---- Model weights / checkpoints (too large; not source) ----
+checkpoints/
+code/gui/03_tool/weights/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+
+# ---- Third-party clones (obtain from upstream; see README) ----
+# sam2_lib (SAM2 / MedSAM2 framework) IS included as code; only its weights
+# (checkpoints/, *.pt) and demo media are excluded (see below).
+code/gui/03_tool/sam3_code/
+code/registration/dupla_renderers/
+
+# ---- sam2_lib: drop non-code bulk, keep library + training source ----
+code/sam2_lib/demo/
+code/sam2_lib/notebooks/
+code/sam2_lib/sav_dataset/
+code/sam2_lib/SAM_2.egg-info/
+*.mp4
+*.avi
+*.mov
+
+# ---- Python / OS cruft ----
+__pycache__/
+*.py[cod]
+.DS_Store
+.ipynb_checkpoints/
+*.zip
+*.egg-info/
+.venv/
+venv/
+
+# ---- results/: default-deny, allowlist only non-patient figures ----
+results/*
+!results/fig_pipeline.png
+!results/fig_dual_plane_geometry.png
+!results/fig_r1_cdf.png
+!results/fig_r3_robustness.png
+!results/fig_e3_clicks.png
+!results/fig_gs_pipeline.png
+!results/fig_gs_pose_error.png
+!results/fig_gs_overlay.png
+
+# temp-moved nested git history (restored after commit)
+**/.git__BAK/
+
+# proposal docx may embed patient figures — excluded from public repo
+docs/Proposal.docx
+
+# doc + thesis (paper) — code-only repo per user (2026-05-26)
+docs/
+chapters/
+references.bib
+thesis_framework.md
+CLAUDE.md
+AGENTS.md

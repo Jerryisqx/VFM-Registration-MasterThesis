@@ -1,0 +1,21 @@
+A / D : previous / next image (auto-saves on page flip)
+1 / 2 : switch class (femur / tibia)
+Left click   : add positive point (SAM mode) / add polygon point (polygon mode)
+Right click  : add negative point (SAM mode) / delete nearest polygon point (polygon mode)
+Middle-drag  : pan the view
+Scroll wheel : zoom (view is not stretched)
+
+S : manually save the 5 files for the current image
+Z : undo the last point
+R : reset the current class
+C : clear all classes
+M : toggle SAM point-prompt / polygon-prompt mode
+B : toggle the circular eraser
+Enter : commit the polygon prompt
+Q / E : adjust the smoothing kernel (smaller / larger)
+[ / ] : adjust the threshold (lower / higher)
+T : toggle class anti-mixing
+G : toggle automatic negative points
+I : choose the image directory
+U : choose the output directory
+Esc / X : exit

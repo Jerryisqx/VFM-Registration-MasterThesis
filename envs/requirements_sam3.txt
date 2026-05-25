@@ -1,0 +1,14 @@
+# SAM3 zero-shot segmentation (single-plane & dual-plane fluoroscopy)
+# Python 3.10+
+
+# Core
+ultralytics>=8.3.237
+numpy
+Pillow
+
+# Optional: if you see "SimpleTokenizer object is not callable"
+# pip uninstall clip -y
+# pip install git+https://github.com/ultralytics/CLIP.git
+
+# SAM3 weights: download sam3.pt from https://huggingface.co/facebook/sam3
+# and place in project dir or set --model /path/to/sam3.pt

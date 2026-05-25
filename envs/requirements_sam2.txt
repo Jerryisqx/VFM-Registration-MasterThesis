@@ -1,0 +1,13 @@
+# SAM2 zero-shot segmentation using your cloned SAM2 repo + sam2 conda env
+# (Not Ultralytics — script uses facebookresearch/sam2 and SAM2AutomaticMaskGenerator.)
+
+# 1. Create and activate the sam2 conda environment (see sam2/INSTALL.md).
+# 2. From the SAM2 repo root: pip install -e ".[notebooks]"
+# 3. Download a checkpoint (e.g. sam2.1_hiera_base_plus.pt) into sam2/checkpoints/
+# 4. Run from MasterThesis:
+#    conda activate sam2
+#    python sam2_zero_shot_segment.py --sam2-repo ./sam2
+
+# Only needed if you run the script without the sam2 env (e.g. for load_tiff_as_rgb):
+# numpy
+# Pillow

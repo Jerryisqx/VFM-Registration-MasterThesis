@@ -1,0 +1,12 @@
+Delivery entry point
+
+1) Read the documentation first
+- G:\sam3\2026-3-20\01_docs\README_delivery.md
+- G:\sam3\2026-3-20\01_docs\environment_setup.md
+- G:\sam3\2026-3-20\01_docs\keyboard_shortcuts.txt
+
+2) View the results directly
+- G:\sam3\2026-3-20\02_view_results\index.csv
+
+3) Launch the annotation tool
+- G:\sam3\2026-3-20\03_tool\run_gui_auto.bat
